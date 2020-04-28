@@ -4,7 +4,7 @@
 
 // https://www.geeksforgeeks.org/is-sizeof-for-a-struct-equal-to-the-sum-of-sizeof-of-each-member/
 struct BMPHEAD1 {
-    int8_t id[2];
+    int16_t id;
 };
 struct BMPHEAD2  {
     int32_t filesize;
