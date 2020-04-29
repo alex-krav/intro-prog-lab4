@@ -7,11 +7,12 @@ int main(int argc, char* argv[])
     try {
         string infile;
         string outfile;
-        int n;
-        read_cli_args(argc, argv, infile, outfile, n);
+        string operation;
+        float scale;
+        read_cli_args(argc, argv, infile, outfile, operation, scale);
 
         BMP bmp(infile);
-        bmp.resize(n);
+        bmp.resize(operation, scale);
         bmp.write(outfile);
     }
     catch (exception e) {
